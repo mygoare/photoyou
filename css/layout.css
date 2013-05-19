@@ -1,0 +1,88 @@
+  body {background-image:url("../images/ps_neutral.png"); font-family:sans-serif;}
+  .video {width:720px; box-shadow:0px 0px 10px #ccc;}
+  .bar {background-color:#cecece; width:720px; height:40px; box-shadow:0px 0px 5px #cecece; position:relative;}
+  .icon {position:absolute; height:30px;top:50%; margin-top:-15px;}
+  .take-photo {left:50%; margin-left:-36px;}
+  .siri {width:30px; height:30px; background:url("../images/siri.png") no-repeat 0px 0px; display:block; right:5px;}
+  .siri-voice {}
+
+  .layout {width:720px;height:auto; /*margin:auto;*/ margin-left:10px;}
+  .maker-area, .pic-area {float:left; background-color:white;}
+
+  .maker-area {position:relative;}
+  #animation {position:absolute; top:0px; left:0px; overflow:hidden; width:720px; height:540px;}
+  .piece {position:absolute; width:720px; height:270px; background:#666; box-shadow:0px 0px 10px #444;}
+  #piece-up {background:#666 url("../images/piece-up.png") no-repeat bottom center;}
+  #piece-down {background:#666 url("../images/piece-down.png") no-repeat top center;}
+
+  .pic-area {min-width:710px; height: auto; box-shadow:0px 0px 10px #ccc; padding: 0px 5px 5px; overflow-x:auto; overflow-y:hidden; position:relative; margin-top:5px;}
+  .pic-area a {display:block; float:left; padding:4px 5px 1px; box-shadow:0px 0px 5px #aaa; margin:5px; -webkit-transition:box-shadow 0.5s;}
+  .pic-area a:hover {box-shadow:0px 0px 5px #222;}
+  .pic-area a:first-child {background:white; box-shadow:7px 0px 22px -11px #888; width:auto; padding:12px 0px;}
+  .pic-area a:nth-child(2) {}
+  .camera {width:60px; height:60px; padding:5px;}
+  .overview {position:absolute; top:20px; margin-left:10px;}
+
+  @-webkit-keyframes animate-up{
+    0%    {top:-275px;}
+    50%   {top:0px;}
+    100%  {top:-275px;}
+  }
+
+  @-webkit-keyframes animate-down {
+    0%    {bottom:-275px;}
+    50%   {bottom:0px;}
+    100%  {bottom:-275px;}
+  }
+
+  #count-num {position:absolute; left:50%; margin-left:45px; font-size:25px; font-family:sans-serif; border:1px solid #aaa; border-radius:70px; padding:1px 6px; background:#bbb; color:#666; top:6px;}
+
+  #tools ul li, #export ul li{float:left; height:40px; line-height:40px; margin:0px 5px;}
+  #tools ul li a, #export ul li a {font-size:14px; text-decoration:none; color:#555; font-family:sans-serif; padding:5px 10px; box-shadow:0px 0px 5px #bbb;}
+  #tools ul li a:hover, #export ul li a:hover {background-color:#ddd; box-shadow:0px 0px 10px #aaa; -webkit-transition: background-color 0.5s, box-shadow 0.5s;}
+  #tools, #export {margin:0px 10px;}
+  #tools {float:left;}
+  #export {float:right;}
+  #educe-box {width:480px; height:400px;}
+
+  #educed {width:720px; height:700px; box-shadow:0px 0px 10px #eee; position:absolute; left:-730px; top:0px; z-index:100; background-color:white;}
+  #educed p {font-size:14px; line-height:30px; border-bottom:1px dashed #aaa;}
+
+  #photo-you {position:fixed; bottom:10px; right:15px; background:url("../images/photo-you.png") no-repeat 0px 0px; width:275px; height:272px;}
+  /*#photos-bg {position:fixed; top:10px; right:10px; background:url("../images/photos-bg.png") no-repeat 0px 0px; width:357px; height:309px;}*/
+  #photos {position:fixed; top:10px; right:15px; background:url("../images/photos.png") no-repeat 0px 0px; width:241px; height:220px;}
+
+
+  #show-filter, #show-decorate, #show-frame-table {position:absolute; background-color:white; box-shadow:0px 0px 10px #aaa; bottom:45px; padding:10px; display:none; border-radius:5px; z-index:1;}
+  #show-filter {left:15px;}
+  #show-decorate {left:70px;}
+  #show-frame-table {left:130px;}
+
+  button {margin-left:5px;}
+
+
+
+  /*younglaker css*/
+  .grayscale {
+    -webkit-filter: grayscale(1);
+  }
+  .brightness {
+    -webkit-filter: brightness(140%);
+  }
+  .blur {
+    -webkit-filter: blur(3px);
+  }
+  .invert {
+    -webkit-filter: invert(100%)
+  }
+  .opacity {
+    -webkit-filter: opacity(50%)
+  }
+  .sepia {
+    -webkit-filter: sepia(1);
+  }
+@media  only screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) {
+}

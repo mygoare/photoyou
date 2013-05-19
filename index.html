@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Photo you -- take your photos everywhere.</title>
+</head>
+<script src="js/html5.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/layout.css" />
+
+<script type="text/javascript" src="./fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css"/>
+<body>
+  <!--<div class="share">-->
+    <!--<ul>-->
+      <!--<li><a href="">分享到新浪微博</a></li>-->
+      <!--<li><a href="">分享到腾讯微博</a></li>-->
+      <!--<li><a href="">分享到QQ空间</a></li>-->
+      <!--<li><a href="">分享到豆瓣</a></li>-->
+    <!--</ul>-->
+  <!--</div>-->
+  <div id="photo-you"></div>
+  <div id="photos-bg"></div>
+  <div id="photos"></div>
+  <audio src="camera.wav"></audio>
+  <div class="layout">
+    <section class="maker-area">
+      <div class="video">
+        <video autoplay width="720" height="540"></video>
+        <div class="bar">
+          <a class="icon take-photo" id="capture" href="javascript:void();">
+            <img src="images/take-photo-icon.png" alt="" />
+          </a>
+          <div style="display:none;" id="count-num"></div>
+          <a class="siri icon" id="siri" href="javascript:void();">
+            <input class="siri-voice" style="opacity:0; width:25px; height:20px; font-size:30px;" x-webkit-speech onwebkitspeechchange="fun(event)" />
+          </a>
+        </div>
+      </div>
+      <div id="animation">
+        <div class="piece" id="piece-up" style="-webkit-transform:rotate(0deg); top:0px; left:0px; -webkit-transition:top 1s, left 1s;"></div>
+        <div class="piece" id="piece-down" style="-webkit-transform:rotate(0deg); bottom:0px; left:0px; -webkit-transition:bottom 1s, left 1s;"></div>
+      </div>
+      <canvas id="pic-canvas" style="display:none;" width="640" height="480"></canvas>
+      <div style="display:none;" class="pic-edit">
+        <canvas id="edit-box" width="720" height="540"></canvas>
+        <div class="edit-bar bar">
+          <div id="tools">
+            <ul>
+              <li><a id="filter" href="javascript:void()">滤镜</a></li>
+              <li><a id="decorate" href="javascript:void()">装饰</a></li>
+              <li><a id="frame-table" href="javascript:void()">表框</a></li>
+            </ul>
+          </div>
+          <div id="show-filter">
+            <button value="1">黑白</button>
+            <button value="2">加亮</button>
+            <button value="3">模糊</button>
+            <button value="4">反色</button>
+            <button value="5">淡化</button>
+            <button value="6">复古</button>
+          </div>
+          <div id="show-decorate">
+            <button>眼泪</button>
+            <button>耳朵</button>
+            <button>胡子</button>
+            <button>弯眼</button>
+            <button>猪鼻</button>
+          </div>
+          <div id="show-frame-table">
+            <button value="1">边框1</button>
+            <button value="2">边框2</button>
+            <button value="3">边框3</button>
+            <button value="4">边框4</button>
+            <button value="5">边框5</button>
+          </div>
+          <div id="export">
+            <ul>
+              <li><a id="revert" href="javascript:void()">还原</a></li>
+              <li><a id="educe" href="javascript:void()" href="">导出</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img id="border-box" style="position:absolute; top:0px; width:720px; height:540px;" />
+      <div id="educed">
+        <a id="fancybox-close" style="display: inline; top:5px; right:5px;"></a>
+        <div style="width:570px; height:430px; margin:auto; margin-top:40px; box-shadow:0px 0px 10px #aaa;">
+          <img style="padding:4px; border:1px dashed #aaa; margin-bottom:15px;" id="educed-pic" src="images/camera.png" alt="" width="560" height="420" />
+
+          <p>图片大小：12kb</p>
+          <p>图片类型：jpeg</p>
+          <p>分享链接：<a href="#">Image Link</a></p>
+        </div>
+      </div>
+    </section>
+    <aside class="pic-area">
+      <a id="init" href="javascript:void();">
+        <img class="camera" src="images/camera.png" alt="拍照选项卡切换" />
+        <!--<span class="overview">My Camera</span>-->
+      </a>
+    </aside>
+    <!--固定logo在上方-->
+    <!--在加上些漂浮物美化的效果-->
+    <!--相机开关效果-->
+    <!--相机声音-->
+  </div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/younglaker.js"></script>
+</html>
